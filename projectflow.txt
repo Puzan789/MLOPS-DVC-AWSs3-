@@ -5,4 +5,4 @@
 5. mkdir s3 
 6. dvc remote add -d myremote s3
 7. dvc add data/ #dvc is responsible for versioning
-8. 
+8. dvc commit and dvc push
