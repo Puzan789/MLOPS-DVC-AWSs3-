@@ -1,0 +1,2 @@
+1. create git repo and clone it in a local.
+2. create code.py and add code to it.(it willsave a csv file to a new "data fodler)
