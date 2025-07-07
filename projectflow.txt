@@ -7,3 +7,4 @@
 7. dvc add data/ #dvc is responsible for versioning
 8. dvc commit and dvc push
 9 . change code in mycode.py and add and check via dvc status
+10 . git commit 
