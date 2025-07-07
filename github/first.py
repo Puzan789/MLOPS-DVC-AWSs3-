@@ -13,3 +13,6 @@ for i in range(5):
 while a > 0:
     print("a is still positive")
     a -= 1
+print("Loop ended")
+def add(x, y):
+    return x + y
