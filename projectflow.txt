@@ -1,2 +1,8 @@
 1. create git repo and clone it in a local.
 2. create code.py and add code to it.(it willsave a csv file to a new "data fodler)
+3. uv add dvc
+4. we do dvc init(create .dvcignore,.dvc)
+5. mkdir s3 
+6. dvc remote add -d myremote s3
+7. dvc add data/ #dvc is responsible for versioning
+8. 
