@@ -21,3 +21,8 @@ def add(x, y):
     return x + y
 
 string_var="For the main branch commit"
+
+def print_string(s):
+    print(s)
+
+om="thio ims"
