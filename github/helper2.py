@@ -6,3 +6,7 @@ str2 = "Helper2 string is also amazing"
 def print_helper2_string(s):
     print(s)
 om2 = "this is helper2 string"
+
+def add_helper2(x, y):
+    return x + y    
+    
