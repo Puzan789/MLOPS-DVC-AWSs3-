@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 import yaml
 
 # Ensure the "logs" directory exists
-log_dir = 'logs'
+log_dir = 'log'
 os.makedirs(log_dir, exist_ok=True)
 
 # logging configuration

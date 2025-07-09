@@ -1,4 +1,0 @@
-2025-07-08 22:48:35,497 - data_ingestion - INFO - Data loaded successfully from https://raw.githubusercontent.com/vikashishere/Datasets/main/spam.csv
-2025-07-08 22:48:35,499 - data_ingestion - DEBUG - Columns renamed successfully
-2025-07-08 22:48:35,529 - data_ingestion - INFO - Data saved successfully to ./data/raw
-2025-07-08 22:48:35,529 - data_ingestion - INFO - Data ingestion completed successfully

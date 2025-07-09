@@ -1,4 +1,7 @@
 venv/
 02_dvc/data
-data 
+
 models 
+
+*.log
+
