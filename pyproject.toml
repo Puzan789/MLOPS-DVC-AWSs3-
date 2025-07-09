@@ -6,5 +6,16 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "dvc>=3.60.1",
+    "dvclive>=3.48.3",
+    "matplotlib>=3.10.3",
+    "nltk>=3.9.1",
     "pandas>=2.3.0",
+    "scikit-learn>=1.7.0",
+    "wordcloud>=1.9.4",
+    "xgboost>=3.0.2",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
 ]
