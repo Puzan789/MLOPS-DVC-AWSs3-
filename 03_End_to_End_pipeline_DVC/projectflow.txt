@@ -9,4 +9,7 @@ Setting up dvc pipeline
 6 dvc init then do dvc repro to tedt the pipeline automation check dvc dag 
 7 now git add dvcadd dvc commit
 
-#paras setup
+#param setup 
+
+
+#Experiment tracking
