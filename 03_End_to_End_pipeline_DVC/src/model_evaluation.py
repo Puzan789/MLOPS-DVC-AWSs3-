@@ -8,6 +8,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_a
 import logging
 import yaml
 from dvclive import Live
+
 # Ensure the "logs" directory exists
 log_dir = "log"
 os.makedirs(log_dir, exist_ok=True)
@@ -115,12 +116,13 @@ def save_metrics(metrics: dict, file_path: str) -> None:
         logger.error("Error occurred while saving the metrics: %s", e)
         raise
 
+
 def main():
     try:
-        params = load_params(params_path='params.yaml')
-        clf = load_model('./models/model.pkl')
-        test_data = load_data('./data/processed/test_tfidf.csv')
-        
+        params = load_params(params_path="params.yaml")
+        clf = load_model("./models/model.pkl")
+        test_data = load_data("./data/processed/test_tfidf.csv")
+
         X_test = test_data.iloc[:, :-1].values
         y_test = test_data.iloc[:, -1].values
 
@@ -128,16 +130,18 @@ def main():
 
         # Experiment tracking using dvclive
         with Live(save_dvc_exp=True) as live:
-            live.log_metric('accuracy', accuracy_score(y_test, y_test))
-            live.log_metric('precision', precision_score(y_test, y_test))
-            live.log_metric('recall', recall_score(y_test, y_test))
+            y_pred = clf.predict(X_test)
+            live.log_metric("accuracy", accuracy_score(y_test, y_pred))
+            live.log_metric("precision", precision_score(y_test, y_pred))
+            live.log_metric("recall", recall_score(y_test, y_test))
 
-            live.log_params(params) #startting logging params
-        
-        save_metrics(metrics, 'reports/metrics.json')
+            live.log_params(params)  # startting logging params
+
+        save_metrics(metrics, "reports/metrics.json")
     except Exception as e:
-        logger.error('Failed to complete the model evaluation process: %s', e)
+        logger.error("Failed to complete the model evaluation process: %s", e)
         print(f"Error: {e}")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
