@@ -8,3 +8,5 @@ Setting up dvc pipeline
 5 create dvc.yaml
 6 dvc init then do dvc repro to tedt the pipeline automation check dvc dag 
 7 now git add dvcadd dvc commit
+
+#paras setup
